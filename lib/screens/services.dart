@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'package:gigamike/screens/contact.dart';
 class Services extends StatelessWidget {
   const Services({super.key});
 
@@ -40,7 +42,9 @@ class Services extends StatelessWidget {
                        
                         TextButton(
                           child: const Text('Contact Me'),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => const Contact()));
+                          },
                         ),
                         const SizedBox(width: 8),
                       ],
@@ -66,7 +70,9 @@ class Services extends StatelessWidget {
                        
                         TextButton(
                           child: const Text('Contact Me'),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => const Contact()));
+                          },
                         ),
                         const SizedBox(width: 8),
                       ],
@@ -92,7 +98,9 @@ class Services extends StatelessWidget {
                        
                         TextButton(
                           child: const Text('Contact Me'),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => const Contact()));
+                          },
                         ),
                         const SizedBox(width: 8),
                       ],
@@ -117,6 +125,7 @@ class Services extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 CircleAvatar(
+                  backgroundColor: Color.fromARGB(22, 61, 122, 1),
                   radius: 45,
                   child: Padding(
                     padding: const EdgeInsets.all(3), // Border radius
@@ -131,9 +140,10 @@ class Services extends StatelessWidget {
                 ),
 
                 CircleAvatar(
+                  backgroundColor: Color.fromARGB(22, 61, 122, 1),
                   radius: 45,
                   child: Padding(
-                    padding: const EdgeInsets.all(3), // Border radius
+                    padding: EdgeInsets.all(3), // Border radius
                     child: ClipOval(
                       child: CircleAvatar(
                         backgroundImage: AssetImage('assets/services/strikingmedia.png'),
@@ -145,9 +155,10 @@ class Services extends StatelessWidget {
                 ),
 
                 CircleAvatar(
+                  backgroundColor: Color.fromARGB(22, 61, 122, 1),
                   radius: 45,
                   child: Padding(
-                    padding: const EdgeInsets.all(3), // Border radius
+                    padding: EdgeInsets.all(3), // Border radius
                     child: ClipOval(
                       child: CircleAvatar(
                         backgroundImage: AssetImage('assets/services/alexachamp-logo.png'),
@@ -166,6 +177,7 @@ class Services extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 CircleAvatar(
+                  backgroundColor: Color.fromARGB(22, 61, 122, 1),
                   radius: 45,
                   child: Padding(
                     padding: const EdgeInsets.all(3), // Border radius
@@ -180,9 +192,10 @@ class Services extends StatelessWidget {
                 ),
 
                 CircleAvatar(
+                  backgroundColor: Color.fromARGB(22, 61, 122, 1),
                   radius: 45,
                   child: Padding(
-                    padding: const EdgeInsets.all(3), // Border radius
+                    padding: EdgeInsets.all(3), // Border radius
                     child: ClipOval(
                       child: CircleAvatar(
                         backgroundImage: AssetImage('assets/services/JCI-Baras.png'),
@@ -194,9 +207,10 @@ class Services extends StatelessWidget {
                 ),
 
                 CircleAvatar(
+                  backgroundColor: Color.fromARGB(22, 61, 122, 1),
                   radius: 45,
                   child: Padding(
-                    padding: const EdgeInsets.all(3), // Border radius
+                    padding: EdgeInsets.all(3), // Border radius
                     child: ClipOval(
                       child: CircleAvatar(
                         backgroundImage: AssetImage('assets/services/uk-phone.png'),
