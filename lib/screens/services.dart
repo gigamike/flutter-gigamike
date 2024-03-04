@@ -14,10 +14,11 @@ class Services extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+
             Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("assets/service2.jpg"),
+                  image: AssetImage("assets/img/service.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -131,7 +132,7 @@ class Services extends StatelessWidget {
                     padding: const EdgeInsets.all(3), // Border radius
                     child: ClipOval(
                       child: CircleAvatar(
-                        backgroundImage: AssetImage('assets/services/movinghub.png'),
+                        backgroundImage: AssetImage('assets/img/services/movinghub.png'),
                         backgroundColor: Colors.transparent,
                         radius: 100,
                       ),
@@ -146,7 +147,7 @@ class Services extends StatelessWidget {
                     padding: EdgeInsets.all(3), // Border radius
                     child: ClipOval(
                       child: CircleAvatar(
-                        backgroundImage: AssetImage('assets/services/strikingmedia.png'),
+                        backgroundImage: AssetImage('assets/img/services/strikingmedia.png'),
                         backgroundColor: Colors.transparent,
                         radius: 100,
                       ),
@@ -161,7 +162,7 @@ class Services extends StatelessWidget {
                     padding: EdgeInsets.all(3), // Border radius
                     child: ClipOval(
                       child: CircleAvatar(
-                        backgroundImage: AssetImage('assets/services/alexachamp-logo.png'),
+                        backgroundImage: AssetImage('assets/img/services/alexachamp-logo.png'),
                         backgroundColor: Colors.transparent,
                         radius: 100,
                       ),
@@ -183,7 +184,7 @@ class Services extends StatelessWidget {
                     padding: const EdgeInsets.all(3), // Border radius
                     child: ClipOval(
                       child: CircleAvatar(
-                        backgroundImage: AssetImage('assets/services/hackathon-ph-logo.png'),
+                        backgroundImage: AssetImage('assets/img/services/hackathon-ph-logo.png'),
                         backgroundColor: Colors.transparent,
                         radius: 100,
                       ),
@@ -198,7 +199,7 @@ class Services extends StatelessWidget {
                     padding: EdgeInsets.all(3), // Border radius
                     child: ClipOval(
                       child: CircleAvatar(
-                        backgroundImage: AssetImage('assets/services/JCI-Baras.png'),
+                        backgroundImage: AssetImage('assets/img/services/JCI-Baras.png'),
                         backgroundColor: Colors.transparent,
                         radius: 100,
                       ),
@@ -213,7 +214,7 @@ class Services extends StatelessWidget {
                     padding: EdgeInsets.all(3), // Border radius
                     child: ClipOval(
                       child: CircleAvatar(
-                        backgroundImage: AssetImage('assets/services/uk-phone.png'),
+                        backgroundImage: AssetImage('assets/img/services/uk-phone.png'),
                         backgroundColor: Colors.transparent,
                         radius: 100,
                       ),

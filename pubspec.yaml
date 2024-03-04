@@ -40,6 +40,12 @@ dependencies:
   flutter_social_button: ^1.1.4+1
   flutter_email_sender: ^6.0.2
   email_validator: ^2.1.17
+  infinite_scroll_pagination: ^4.0.0
+  http: ^1.2.0
+  cached_network_image: ^3.3.1
+  rxdart: ^0.27.7
+  html: ^0.15.4
+  intl: ^0.19.0
 
 dev_dependencies:
   flutter_test:
@@ -65,19 +71,21 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - assets/mik.jpg
-     - assets/service2.jpg
-     - assets/contactus.jpg
-     - assets/services/movinghub.png
-     - assets/services/strikingmedia.png
-     - assets/services/alexachamp-logo.png
-     - assets/services/hackathon-ph-logo.png
-     - assets/services/JCI-Baras.png
-     - assets/services/ph-phone.png
-     - assets/services/uk-phone.png
-     - assets/certifications/aws-certified-devops-engineer-professional.png
-     - assets/certifications/aws-certified-solutions-architect-professional.png
-     - assets/certifications/aws-certified-advanced-networking-specialty.png
+     - assets/img/mik.jpg
+     - assets/img/service.jpg
+     - assets/img/certifications.jpg
+     - assets/img/portfolio.jpg
+     - assets/img/contactus.jpg
+     - assets/img/services/movinghub.png
+     - assets/img/services/strikingmedia.png
+     - assets/img/services/alexachamp-logo.png
+     - assets/img/services/hackathon-ph-logo.png
+     - assets/img/services/JCI-Baras.png
+     - assets/img/services/ph-phone.png
+     - assets/img/services/uk-phone.png
+     - assets/img/certifications/aws-certified-devops-engineer-professional.png
+     - assets/img/certifications/aws-certified-solutions-architect-professional.png
+     - assets/img/certifications/aws-certified-advanced-networking-specialty.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

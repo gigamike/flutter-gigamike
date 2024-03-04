@@ -24,7 +24,6 @@ class _PortfolioPageState extends State<Portfolio> {
             ListTile(
               title: Text(heading),
               subtitle: Text(subheading),
-              trailing: const Icon(Icons.favorite_outline),
             ),
             Container(
               height: 200.0,
@@ -40,10 +39,6 @@ class _PortfolioPageState extends State<Portfolio> {
             ),
             ButtonBar(
               children: [
-                TextButton(
-                  child: const Text('CONTACT AGENT'),
-                  onPressed: () {/* ... */},
-                ),
                 TextButton(
                   child: const Text('LEARN MORE'),
                   onPressed: () {/* ... */},
@@ -61,31 +56,47 @@ class _PortfolioPageState extends State<Portfolio> {
         title: const Text('Portfolio'),
       ),
       body: Container(
-         padding: const EdgeInsets.all(16.0),
          child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
              child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                 Padding(
-                  padding: const EdgeInsets.only(bottom: 20.0),
+
+                Container(
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/img/portfolio.jpg"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  padding: const EdgeInsets.all(90),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.all(7.0),
                   child: buildCard(),
-                 ),
-                 Padding(
-                  padding: const EdgeInsets.only(bottom: 20.0),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.all(7.0),
                   child: buildCard(),
-                 ),
-                 Padding(
-                  padding: const EdgeInsets.only(bottom: 20.0),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.all(7.0),
                   child: buildCard(),
-                 ),
-                 Padding(
-                  padding: EdgeInsets.only(bottom: 20.0),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.all(7.0),
                   child: buildCard(),
-                 ),
-                 Padding(
-                  padding: const EdgeInsets.only(bottom: 20.0),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.all(7.0),
                   child: buildCard(),
-                 ),
+                ),
+                
               ],
              ),
          ),

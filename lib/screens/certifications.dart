@@ -18,29 +18,45 @@ class Certifications extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Certifications'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(10),
-        child: ListView.builder(
-          itemCount: certifications.length,
-          itemBuilder: (context, index) {
-            return ListTile(
-              onTap: () {
-                  _launchUrl(Uri.parse( certifications[index].url));
-              },
-              leading: CircleAvatar(
-                backgroundImage: AssetImage('assets/certifications/' + certifications[index].photo),
-              ),
-              title: Text(
-                certifications[index].title,
-                style: const TextStyle(
-                  color: Colors.black,
-                  fontSize: 15,
+      body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Container(
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/img/certifications.jpg"),
+                  fit: BoxFit.cover,
                 ),
               ),
-            );
-          },
+            ),
+          
+            const SizedBox(height: 8), 
+        
+            Expanded(
+              child: ListView.builder(
+                itemCount: certifications.length,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    onTap: () {
+                        _launchUrl(Uri.parse( certifications[index].url));
+                    },
+                    leading: CircleAvatar(
+                      backgroundImage: AssetImage('assets/img/certifications/' + certifications[index].photo),
+                    ),
+                    title: Text(
+                      certifications[index].title,
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 15,
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+        
+          ],
         ),
-      ),
     );
   }
 }

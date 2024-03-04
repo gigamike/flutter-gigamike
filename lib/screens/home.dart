@@ -2,19 +2,17 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
-import 'package:gigamike/widgets/about_grid_item.dart';
-import 'package:gigamike/widgets/services_grid_item.dart';
-import 'package:gigamike/widgets/certifications_grid_item.dart';
-import 'package:gigamike/widgets/portfolio_grid_item.dart';
-import 'package:gigamike/widgets/blog_grid_item.dart';
-import 'package:gigamike/widgets/contact_grid_item.dart';
+import 'package:gigamike/widgets/home/about_grid_item.dart';
+import 'package:gigamike/widgets/home/services_grid_item.dart';
+import 'package:gigamike/widgets/home/certifications_grid_item.dart';
+import 'package:gigamike/widgets/home/portfolio_grid_item.dart';
+import 'package:gigamike/widgets/home/blog_grid_item.dart';
+import 'package:gigamike/widgets/home/contact_grid_item.dart';
 class Home extends StatefulWidget {
   const Home({super.key});
 
   @override
-  State<Home> createState() {
-    return _Home();
-  }
+  State<Home> createState() => _Home();
 }
 
 class _Home extends State<Home>{

@@ -72,7 +72,7 @@ class _Contact extends State<Contact>{
              Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("assets/contactus.jpg"),
+                  image: AssetImage("assets/img/contactus.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),

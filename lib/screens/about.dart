@@ -30,7 +30,7 @@ class About extends StatelessWidget {
                       alignment: Alignment(0.6, 0.6),
                       children: [
                         CircleAvatar(
-                          backgroundImage: AssetImage('assets/mik.jpg'),
+                          backgroundImage: AssetImage('assets/img/mik.jpg'),
                           radius: 100,
                         ),
                       ],
@@ -46,7 +46,9 @@ class About extends StatelessWidget {
                 const SizedBox(width: 10),
               ],
             ),
+            
             const SizedBox(height: 20),
+            
             const Padding(
               padding: EdgeInsets.all(12),
               child: Text(
@@ -54,7 +56,9 @@ class About extends StatelessWidget {
                 softWrap: true,
               ),
             ),
+            
             const SizedBox(height: 20),
+            
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -93,7 +97,9 @@ class About extends StatelessWidget {
                 )
               ],
             ),
+            
             const SizedBox(height: 30),
+            
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -123,7 +129,9 @@ class About extends StatelessWidget {
                 )
               ],
             ),
+            
             const SizedBox(height: 30),
+            
             const Center(
               child: Text(
                 'www.gigamike.net',
