@@ -63,7 +63,6 @@ class _BlogPageState extends State<Blog> {
         _pagingController.appendPage(newItems, nextPageKey);
       }
     } catch (error) {
-      print(error);
       _pagingController.error = error;
     }
   }

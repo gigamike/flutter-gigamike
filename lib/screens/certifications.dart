@@ -1,62 +1,105 @@
 import 'package:flutter/material.dart';
 
-import 'package:url_launcher/url_launcher.dart';
+import 'package:gigamike/models/certification.dart';
+import 'package:gigamike/services/certification_api.dart';
+import 'package:gigamike/widgets/certifications/search_input.dart';
+import 'package:gigamike/widgets/certifications/list_item.dart';
 
-import 'package:gigamike/data/certifications.dart';
-class Certifications extends StatelessWidget {
+import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
+
+class Certifications extends StatefulWidget {
   const Certifications({super.key});
+  
+  @override
+  _CertificationsPageState createState() => _CertificationsPageState();
+}
 
-  Future<void> _launchUrl(url) async {
-    if (!await launchUrl(url)) {
-      throw Exception('Could not launch $url');
+class _CertificationsPageState extends State<Certifications> {
+  static const _pageSize = 10;
+
+  final PagingController<int, Certification> _pagingController =
+      PagingController(firstPageKey: 1);
+
+  String? _searchTerm;
+
+  @override
+  void initState() {
+    _pagingController.addPageRequestListener((pageKey) {
+      _fetchPage(pageKey);
+    });
+
+    _pagingController.addStatusListener((status) {
+      if (status == PagingStatus.subsequentPageError) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: const Text(
+              'Something went wrong while fetching a new page.',
+            ),
+            action: SnackBarAction(
+              label: 'Retry',
+              onPressed: () => _pagingController.retryLastFailedRequest(),
+            ),
+          ),
+        );
+      }
+    });
+
+    super.initState();
+  }
+
+  Future<void> _fetchPage(pageKey) async {
+    try {
+      final newItems = await CertificationApi.getCertifications(
+        pageKey,
+        _pageSize,
+        searchTerm: _searchTerm,
+      );
+
+      final isLastPage = newItems.length < _pageSize;
+      if (isLastPage) {
+        _pagingController.appendLastPage(newItems);
+      } else {
+        final nextPageKey = pageKey + 1;
+        _pagingController.appendPage(newItems, nextPageKey);
+      }
+    } catch (error) {
+      _pagingController.error = error;
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Certifications'),
-      ),
-      body: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Container(
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("assets/img/certifications.jpg"),
-                  fit: BoxFit.cover,
-                ),
+        appBar: AppBar(
+          title: const Text('Certifications'),
+        ),
+        body: CustomScrollView(
+        slivers: <Widget>[
+          SearchInput(
+            onChanged: (searchTerm) => _updateSearchTerm(searchTerm),
+          ),
+          PagedSliverList<int, Certification>(
+            pagingController: _pagingController,
+            builderDelegate: PagedChildBuilderDelegate<Certification>(
+              animateTransitions: true,
+              itemBuilder: (context, item, index) => ListItem(
+                certification: item,
               ),
             ),
-          
-            const SizedBox(height: 8), 
-        
-            Expanded(
-              child: ListView.builder(
-                itemCount: certifications.length,
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    onTap: () {
-                        _launchUrl(Uri.parse( certifications[index].url));
-                    },
-                    leading: CircleAvatar(
-                      backgroundImage: AssetImage('assets/img/certifications/' + certifications[index].photo),
-                    ),
-                    title: Text(
-                      certifications[index].title,
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 15,
-                      ),
-                    ),
-                  );
-                },
-              ),
-            ),
-        
-          ],
+          ),
+        ],
         ),
     );
+  }
+
+  void _updateSearchTerm(String searchTerm) {
+    _searchTerm = searchTerm;
+    _pagingController.refresh();
+  }
+
+  @override
+  void dispose() {
+    _pagingController.dispose();
+    super.dispose();
   }
 }

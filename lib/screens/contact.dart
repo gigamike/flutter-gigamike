@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:email_validator/email_validator.dart';
+// import 'package:email_validator/email_validator.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 
 class Contact extends StatefulWidget {
