@@ -27,10 +27,11 @@ class ServicesGridItem extends StatelessWidget{
             Icon(
               Icons.emoji_objects,
               color: Color.fromARGB(255, 255, 255, 255),
+              size: 50.0,
             ), 
             Text(
               "Services",
-              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255), fontSize: 18),
             ),
           ],
         ),

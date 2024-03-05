@@ -39,7 +39,7 @@ class ListItem extends StatelessWidget {
 
     return Card(
       elevation: 4.0,
-      
+      color: const Color.fromRGBO(22, 61, 122, 1),
       child: Column(
         children: [
           ListTile(
@@ -48,11 +48,15 @@ class ListItem extends StatelessWidget {
             },
             title: Text(
               heading,
-              style: Theme.of(context).textTheme.headlineSmall,
+              style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 20),
             ),
-            subtitle: Text(outputDate),
+            subtitle: Text(
+              outputDate,
+              style: const TextStyle( color: Colors.white, fontSize: 16),  
+            ),
           ),
           Container(
+              padding: const EdgeInsets.all(3.0),
               height: 200.0,
               child: InkWell(
                 child: Ink.image(
@@ -67,12 +71,18 @@ class ListItem extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(5.0),
             alignment: Alignment.centerLeft,
-            child: Text(_parseHtmlString(excerpt)),
+            child: Text(
+              _parseHtmlString(excerpt),
+              style: const TextStyle(color: Colors.white, fontSize: 16),
+            ),
           ),
           ButtonBar(
             children: [
               TextButton(
-                child: const Text('View more'),
+                child: const Text(
+                  'View more',
+                  style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 20),  
+                ),
                 onPressed: () {
                   _launchUrl(Uri.parse(link));
                 },

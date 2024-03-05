@@ -27,10 +27,11 @@ class PortfolioGridItem extends StatelessWidget{
             Icon(
               Icons.developer_mode,
               color: Color.fromARGB(255, 255, 255, 255),
+              size: 50.0,
             ), 
             Text(
               "Portfolio",
-              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255), fontSize: 18),
             ),
           ],
         ),

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:gigamike/models/certification.dart';
 
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:gigamike/screens/certifications.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
@@ -32,7 +31,7 @@ class ListItem extends StatelessWidget {
 
     return Card(
       elevation: 4.0,
-      
+      color: const Color.fromRGBO(22, 61, 122, 1),
       child: Column(
         children: [
           ListTile(
@@ -41,10 +40,11 @@ class ListItem extends StatelessWidget {
             },
             title: Text(
               name,
-              style: Theme.of(context).textTheme.headlineSmall,
+              style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 20),
             ),
           ),
           Container(
+              padding: const EdgeInsets.all(3.0),
               height: 400.0,
               child: InkWell(
                 child: Ink.image(
@@ -64,7 +64,10 @@ class ListItem extends StatelessWidget {
           ButtonBar(
             children: [
               TextButton(
-                child: const Text('View more'),
+                child: const Text(
+                  'View more',
+                  style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 20),
+                ),
                 onPressed: () {
                   _launchUrl(Uri.parse(url));
                 },

@@ -27,10 +27,11 @@ class AboutGridItem extends StatelessWidget{
             Icon(
               Icons.account_circle_rounded,
               color: Color.fromARGB(255, 255, 255, 255),
+              size: 50.0,
             ), 
             Text(
               "About",
-              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255), fontSize: 18),
             ),
           ],
         ),

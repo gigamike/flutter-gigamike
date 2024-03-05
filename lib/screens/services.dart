@@ -29,20 +29,33 @@ class Services extends StatelessWidget {
 
             Center(
               child: Card(
+                color: const Color.fromRGBO(22, 61, 122, 1),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     const ListTile(
-                      leading: Icon(Icons.open_in_browser),
-                      title: Text('Web Development'),
-                      subtitle: Text('Your idea into reality. Have your own website.'),
+                      leading: Icon(
+                        Icons.open_in_browser,
+                        color: Colors.white,
+                      ),
+                      title: Text(
+                        'Web Development',
+                        style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 20),
+                      ),
+                      subtitle: Text(
+                        'Your idea into reality. Have your own website.',
+                        style: TextStyle(color: Colors.white, fontSize: 16),
+                      ),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                        
                         TextButton(
-                          child: const Text('Contact Me'),
+                          child: const Text(
+                            'Contact Me',
+                            style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 20),  
+                          ),
                           onPressed: () {
                             Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => const Contact()));
                           },
@@ -57,20 +70,33 @@ class Services extends StatelessWidget {
 
             Center(
               child: Card(
+                color: const Color.fromRGBO(22, 61, 122, 1),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     const ListTile(
-                      leading: Icon(Icons.mobile_friendly),
-                      title: Text('Native Mobile Development'),
-                      subtitle: Text('Your idea into reality. Have your own mobile app.'),
+                      leading: Icon(
+                        Icons.mobile_friendly,
+                        color: Colors.white,
+                      ),
+                      title: Text(
+                        'Native Mobile Development',
+                        style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 20),
+                      ),
+                      subtitle: Text(
+                        'Your idea into reality. Have your own mobile app.',
+                        style: TextStyle(color: Colors.white, fontSize: 16),  
+                      ),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                        
                         TextButton(
-                          child: const Text('Contact Me'),
+                          child: const Text(
+                            'Contact Me',
+                            style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 20),  
+                          ),
                           onPressed: () {
                             Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => const Contact()));
                           },
@@ -85,20 +111,33 @@ class Services extends StatelessWidget {
 
             Center(
               child: Card(
+                color: const Color.fromRGBO(22, 61, 122, 1),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     const ListTile(
-                      leading: Icon(Icons.wb_cloudy),
-                      title: Text('Hosting, DevOps'),
-                      subtitle: Text('Migrate to AWS Clouds.'),
+                      leading: Icon(
+                        Icons.wb_cloudy,
+                        color: Colors.white,
+                      ),
+                      title: Text(
+                        'Hosting, DevOps',
+                        style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 20),
+                      ),
+                      subtitle: Text(
+                        'Migrate to AWS Clouds.',
+                        style: TextStyle(color: Colors.white, fontSize: 16),
+                      ),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                        
                         TextButton(
-                          child: const Text('Contact Me'),
+                          child: const Text(
+                            'Contact Me',
+                            style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 20),  
+                          ),
                           onPressed: () {
                             Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => const Contact()));
                           },

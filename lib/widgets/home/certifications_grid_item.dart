@@ -27,10 +27,11 @@ class CertificationsGridItem extends StatelessWidget{
             Icon(
               Icons.emoji_events,
               color: Color.fromARGB(255, 255, 255, 255),
+              size: 50.0,
             ), 
             Text(
               "Certifications",
-              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255), fontSize: 18),
             ),
           ],
         ),

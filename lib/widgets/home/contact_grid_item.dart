@@ -27,10 +27,11 @@ class ContactGridItem extends StatelessWidget{
             Icon(
               Icons.contact_support,
               color: Color.fromARGB(255, 255, 255, 255),
+              size: 50.0,
             ), 
             Text(
               "Contact Me",
-              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255), fontSize: 18),
             ),
           ],
         ),
