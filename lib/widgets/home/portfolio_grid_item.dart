@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:gigamike/screens/portfolio.dart';
+import 'package:gigamike/screens/portfolios.dart';
 
 class PortfolioGridItem extends StatelessWidget{
   const PortfolioGridItem({super.key});
@@ -19,7 +19,7 @@ class PortfolioGridItem extends StatelessWidget{
       ),
       child: InkWell(
         onTap: () {
-           Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => const Portfolio()));
+           Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => const Portfolios()));
         },
         child: const Column(
           mainAxisAlignment: MainAxisAlignment.center,

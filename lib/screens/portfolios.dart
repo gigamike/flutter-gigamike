@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 
-import 'package:gigamike/models/certification.dart';
-import 'package:gigamike/services/certification_api.dart';
-import 'package:gigamike/widgets/certifications/search_input.dart';
-import 'package:gigamike/widgets/certifications/list_item.dart';
+import 'package:gigamike/models/portfolio.dart';
+import 'package:gigamike/services/portfolio_api.dart';
+import 'package:gigamike/widgets/portfolios/search_input.dart';
+import 'package:gigamike/widgets/portfolios/list_item.dart';
 
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
-class Certifications extends StatefulWidget {
-  const Certifications({super.key});
+class Portfolios extends StatefulWidget {
+  const Portfolios({super.key});
   
   @override
-  _CertificationsPageState createState() => _CertificationsPageState();
+  _PortfoliosPageState createState() => _PortfoliosPageState();
 }
 
-class _CertificationsPageState extends State<Certifications> {
+class _PortfoliosPageState extends State<Portfolios> {
   static const _pageSize = 10;
 
-  final PagingController<int, Certification> _pagingController =
+  final PagingController<int, Portfolio> _pagingController =
       PagingController(firstPageKey: 1);
 
   String? _searchTerm;
@@ -49,7 +49,7 @@ class _CertificationsPageState extends State<Certifications> {
 
   Future<void> _fetchPage(pageKey) async {
     try {
-      final newItems = await CertificationApi.getCertifications(
+      final newItems = await PortfolioApi.getPortfolios(
         pageKey,
         _pageSize,
         searchTerm: _searchTerm,
@@ -71,7 +71,7 @@ class _CertificationsPageState extends State<Certifications> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Certifications'),
+          title: const Text('Portfolios'),
         ),
         body: CustomScrollView(
         slivers: <Widget>[
@@ -80,12 +80,12 @@ class _CertificationsPageState extends State<Certifications> {
           //   onChanged: (searchTerm) => _updateSearchTerm(searchTerm),
           // ),
 
-          PagedSliverList<int, Certification>(
+          PagedSliverList<int, Portfolio>(
             pagingController: _pagingController,
-            builderDelegate: PagedChildBuilderDelegate<Certification>(
+            builderDelegate: PagedChildBuilderDelegate<Portfolio>(
               animateTransitions: true,
               itemBuilder: (context, item, index) => ListItem(
-                certification: item,
+                portfolio: item,
               ),
             ),
           ),

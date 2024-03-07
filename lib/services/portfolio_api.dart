@@ -1,19 +1,19 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:gigamike/models/certification.dart';
+import 'package:gigamike/models/portfolio.dart';
 import 'package:http/http.dart' as http;
 
 // ignore: avoid_classes_with_only_static_members
-class CertificationApi {
-  static Future<List<Certification>> getCertifications(
+class PortfolioApi {
+  static Future<List<Portfolio>> getPortfolios(
     int page,
     int limit, {
     String? searchTerm,
   }) async =>
       http
           .get(
-            _ApiUrlBuilder.Certifications(
+            _ApiUrlBuilder.Portfolios(
               page,
               limit,
               searchTerm: searchTerm,
@@ -21,10 +21,10 @@ class CertificationApi {
             // headers: {'Accept': 'application/json'},
           )
           // .timeout(const Duration(seconds: 1000))
-          .mapFromResponse<List<Certification>, List<dynamic>>(
+          .mapFromResponse<List<Portfolio>, List<dynamic>>(
             (jsonArray) => _parseItemListFromJsonArray(
               jsonArray,
-              (jsonObject) => Certification.fromJson(jsonObject),
+              (jsonObject) => Portfolio.fromJson(jsonObject),
             ),
           );
 
@@ -42,15 +42,15 @@ class NoConnectionException implements Exception {}
 // ignore: avoid_classes_with_only_static_members
 class _ApiUrlBuilder {
   static const _baseUrl = 'https://laravel7.gigamike.net/api/';
-  static const _CertificationResource = 'certifications';
+  static const _PortfolioResource = 'portfolios';
 
-  static Uri Certifications(
+  static Uri Portfolios(
     int page,
     int limit, {
     String? searchTerm,
   }) =>
       Uri.parse(
-        '$_baseUrl$_CertificationResource'
+        '$_baseUrl$_PortfolioResource'
         '?page=$page'
         '${_buildSearchTermQuery(searchTerm)}',
       );
