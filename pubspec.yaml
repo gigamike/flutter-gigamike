@@ -47,6 +47,7 @@ dependencies:
   html: ^0.15.4
   intl: ^0.19.0
   google_fonts: ^6.2.0
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
@@ -84,29 +85,6 @@ flutter:
      - assets/img/services/JCI-Baras.png
      - assets/img/services/ph-phone.png
      - assets/img/services/uk-phone.png
-     - assets/img/certifications/aws-certified-devops-engineer-professional.png
-     - assets/img/certifications/aws-certified-solutions-architect-professional.png
-     - assets/img/certifications/aws-certified-advanced-networking-specialty.png
-     - assets/img/portfolios/alexachampcom.jpeg
-     - assets/img/portfolios/all-about-web-hosting.jpeg
-     - assets/img/portfolios/angel-hack-manila-2019-1st-place-winner.jpeg
-     - assets/img/portfolios/break-the-fake-2019-3rd-place-winner.jpeg
-     - assets/img/portfolios/clash-of-code-2019-3rd-place-winner.jpeg
-     - assets/img/portfolios/code-for-the-kingdom-2017-1st-place-winner.jpeg
-     - assets/img/portfolios/decentralized-innovations-startups-hackathon-dish-2019-1st-place-winner.jpeg
-     - assets/img/portfolios/devcon-raspberry-pi-hackathon-2018-1st-place-winner.jpeg
-     - assets/img/portfolios/gigamikenet.jpeg
-     - assets/img/portfolios/google-codeblaze-2017-3rd-place-winner.jpeg
-     - assets/img/portfolios/hackathonph.jpeg
-     - assets/img/portfolios/hackmanila-2018-1st-place-winner.jpeg
-     - assets/img/portfolios/hr-global-johnson-and-johnson-2019-peoples-choice-award.jpeg
-     - assets/img/portfolios/jci-baras.jpeg
-     - assets/img/portfolios/lotto-insights.jpeg
-     - assets/img/portfolios/peace-hack-2016-2nd-place-winner.jpg
-     - assets/img/portfolios/ph-phone.jpeg
-     - assets/img/portfolios/striking-media.jpeg
-     - assets/img/portfolios/uhack-real-estate-and-liveable-cities-hackathon-2019-2nd-place-winner.jpeg
-     - assets/img/portfolios/uk-phone.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
