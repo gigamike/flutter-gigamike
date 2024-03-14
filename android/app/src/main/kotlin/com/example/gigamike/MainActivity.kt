@@ -1,4 +1,4 @@
-package com.example.gigamike
+package com.gigamike.gigamike
 
 import io.flutter.embedding.android.FlutterActivity
 

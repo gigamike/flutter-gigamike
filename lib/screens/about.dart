@@ -100,6 +100,7 @@ class About extends StatelessWidget {
             
             const SizedBox(height: 30),
             
+            /*
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -131,7 +132,8 @@ class About extends StatelessWidget {
             ),
             
             const SizedBox(height: 30),
-            
+            */
+
             const Center(
               child: Text(
                 'www.gigamike.net',
