@@ -136,7 +136,7 @@ class About extends StatelessWidget {
 
             const Center(
               child: Text(
-                'www.gigamike.net',
+                'gigamike.net',
               ),
             ),
           ],
