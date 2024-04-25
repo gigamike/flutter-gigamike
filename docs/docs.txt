@@ -1,0 +1,2 @@
+open ios/Runner.xcworkspace
+flutter build ios
