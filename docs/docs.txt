@@ -1,2 +1,3 @@
 open ios/Runner.xcworkspace
 flutter build ios
+flutter build ipa
